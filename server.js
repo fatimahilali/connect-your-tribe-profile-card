@@ -19,7 +19,6 @@ const personResponseJSON = await personResponse.json()
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(personResponseJSON)
 
-console.log(" Gegevens uit API:", personResponseJSON);
 
  
 

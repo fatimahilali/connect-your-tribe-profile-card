@@ -1,7 +1,7 @@
 /**
  * Author: @ Fatima El Hilali
  * @file styles.css 
- * @description Dit stylesheet bevat de stijlen voor het visitekaartje.
+ * @description Dit stylesheet bevat de stijlen voor het visitekaartje...
  */
 
 
@@ -23,7 +23,6 @@ body {
   background: linear-gradient(#0d7c66, #41b3a2, #bde8ca, #d7c3f1);
   width: 35vw;
   max-width: 90%;
-  background-color: #ffffff;
   box-shadow: 0 0.25em 0.5em #ce51511a;
   border-radius: 1em;
   text-align: center;
@@ -53,22 +52,21 @@ body {
   font-size: 1rem;
   color: #0f5248;
   margin: 0.3125em 0;
-  font-family: myFont;
   margin-bottom: 0.625em;
+  font-family: 'Permanent Marker', cursive;
+
 }
 
 /* Stijlen voor de profielfoto */
 .profile-photo {
   width: 6.25em;
-  /* ~100px */
   height: 6.875em;
-  /* ~110px */
   border-radius: 50%;
   object-fit: cover;
   border: 0.3125em solid;
-  /* ~5px */
   border-color: #0d7c66;
   animation: backgroundAnimation 10s infinite;
+
 }
 
 /* Animatie voor de borderkleur van de profielfoto */
@@ -111,21 +109,8 @@ body {
 }
 
 
-/* Stijlen voor de tekst in de avatar-sectie */
-.avatar-card p {
-  margin: 0;
-  font-size: 0.4375rem;
-  color: #1b403a;
-}
 
-/* Stijlen voor de padding van de kaartinhoud */
-.card-padding {
-  padding: 1.25em;
-  display: flex;
-  align-items: center;
-  margin-top: 0.625em;
-  justify-content: space-between;
-}
+
 
 
 /* Stijlen voor de quote-sectie */
@@ -155,12 +140,10 @@ body {
 }
 
 
-
 /* Kleur van de tekst in de quote-sectie */
 .quote-card p {
   color: #0f5248;
 }
-
 
 
 
@@ -185,9 +168,13 @@ body {
   background-color: #89a39f;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   color: #1b403a;
   font-size: 0.625rem;
 }
+
+
+
 
 
 /* Stijlen voor de bezoekenteller */
