@@ -161,3 +161,25 @@ body {
 }
 
 
+
+/* Stijlen voor de voettekst van het visitekaartje */
+.footer-card {
+  padding: 0.5em;
+  background-color: #89a39f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #1b403a;
+  font-size: 0.625rem;
+}
+
+
+
+/* Stijlen voor de bezoekenteller */
+.visit-counter {
+  margin-top: -0.0625em;
+  margin-left: 9.375em;
+  color: #43645f;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.625rem;
+}
