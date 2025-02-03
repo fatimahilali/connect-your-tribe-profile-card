@@ -1,14 +1,39 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+<article class="business-card">
+  <article class="card-padding">
+    <article class="avatar-card">
+      <!-- Naam -->
+      <h1 class="name">Fatima el Hilali</h1>
 
-  <p>{{ person.name }}</p>
+      <!-- Profielfoto -->
+      <img src="/assets/fati.jpg" alt="Foto van Fatima el Hilali" class="profile-photo" id="profile-photo" />
 
-  <footer></footer>
+      <p>FDND Student</p>
+    </article>
+
+    <section class="skills">
+      <article class="quote-card">
+        <p>"Mijn skills en expertise in webtechnologie."</p>
+      </article>
+      <article class="skill html">
+        <p>★ ★ ★ HTML - De basis van elke website!</p>
+      </article>
+      <article class="skill css">
+        <p>★ ★ ★ CSS - Zorgt voor een mooi ontwerp!</p>
+      </article>
+      <article class="skill js">
+        <p>★ ★ JavaScript - Maakt de pagina levendig!</p>
+      </article>
+    </section>
+  </article>
+
+  <article class="footer-card">
+    <span>📧 {{ person.email }}</span>
+    <span>📞 +31 695 595 56</span>
+    <p id="visit-counter" class="visit-counter">Bezoeken: {{ visitCount }}</p>
+  </article>
 </article>
+
 
 {% render 'partials/foot.liquid' %}

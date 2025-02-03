@@ -1,53 +1,200 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/**
+ * Author: @ Fatima El Hilali
+ * @file styles.css 
+ * @description Dit stylesheet bevat de stijlen voor het visitekaartje.
+ */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
+
+/* stijlen voor de body */
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
-  color: #050542;
-}
-
-header {
-  padding: 0.5rem;
-  background: #A675F5;
-  color: white;
-
-  h1 {
-    text-transform: uppercase;
-  }
-}
-
-article {
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 20rem;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* visitekaartje container */
+.business-card {
+  background: linear-gradient(#0d7c66, #41b3a2, #bde8ca, #d7c3f1);
+  width: 35vw;
+  max-width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 0.25em 0.5em #ce51511a;
+  border-radius: 1em;
   text-align: center;
-  transform-origin: center;
-  transform: rotate(2deg);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  > p {
-    font-size: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    transform-origin: center;
-    transform: rotate(-6deg);
-    word-break: break-all;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+/* Pseudo-element voor een extra achtergrondvorm in de kaart */
+.business-card::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  width: 12.5em;
+  height: 12.5em;
+  background-color: #c65bcf;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+
+
+/* Stijlen voor de titel op de visitekaart */
+.business-card h1 {
+  font-size: 1rem;
+  color: #0f5248;
+  margin: 0.3125em 0;
+  font-family: myFont;
+  margin-bottom: 0.625em;
+}
+
+/* Stijlen voor de profielfoto */
+.profile-photo {
+  width: 6.25em;
+  /* ~100px */
+  height: 6.875em;
+  /* ~110px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.3125em solid;
+  /* ~5px */
+  border-color: #0d7c66;
+  animation: backgroundAnimation 10s infinite;
+}
+
+/* Animatie voor de borderkleur van de profielfoto */
+@keyframes backgroundAnimation {
+
+  0%,
+  100% {
+    border-color: #41b3a2;
+  }
+
+  25% {
+    border-color: #0f5248;
+  }
+
+  50% {
+    border-color: #bde8ca;
+  }
+
+  75% {
+    border-color: #89a39f;
   }
 }
 
-footer {
-  height: 1rem;
-  background: #A675F5;
+
+/*  Info onder profielfoto */
+.avatar-card p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #1b403a;
+}
+
+
+/* Stijlen voor de padding van de kaartinhoud */
+.card-padding {
+  padding: 1.25em;
+  display: flex;
+  align-items: center;
+  margin-top: 0.625em;
+  justify-content: space-between;
+}
+
+
+/* Stijlen voor de tekst in de avatar-sectie */
+.avatar-card p {
+  margin: 0;
+  font-size: 0.4375rem;
+  color: #1b403a;
+}
+
+/* Stijlen voor de padding van de kaartinhoud */
+.card-padding {
+  padding: 1.25em;
+  display: flex;
+  align-items: center;
+  margin-top: 0.625em;
+  justify-content: space-between;
+}
+
+
+/* Stijlen voor de quote-sectie */
+.quote-card {
+  margin-top: -1.875em;
+  font-size: 0.875rem;
+  font-style: italic;
+  padding: 0.625em;
+  border-radius: 0.5em;
+  font-family: "Georgia", serif;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Definieer de heartbeat animatie */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Kleur van de tekst in de quote-sectie */
+.quote-card p {
+  color: #0f5248;
+}
+
+
+
+
+
+/* Stijlen voor de vaardigheidssectie */
+.skill p {
+  margin: 0;
+  color: #0f5248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3125em 0;
+  font-size: 0.625rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+
+/* Stijlen voor de voettekst van het visitekaartje */
+.footer-card {
+  padding: 0.5em;
+  background-color: #89a39f;
+  display: flex;
+  justify-content: space-evenly;
+  color: #1b403a;
+  font-size: 0.625rem;
+}
+
+
+/* Stijlen voor de bezoekenteller */
+.visit-counter {
+  margin-top: -0.0625em;
+  margin-left: 9.375em;
+  color: #43645f;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.625rem;
 }
