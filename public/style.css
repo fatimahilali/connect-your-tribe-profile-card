@@ -5,18 +5,19 @@
  */
 
 
- /* stijlen voor de body */
- body {
+
+/* Algemene stijlen voor de body */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: monospace, sans-serif;
 }
 
-/* Media query voor body */
+/* Media query voor de body */
 @media (width <= 48rem) {
   body {
     height: auto;
@@ -24,38 +25,49 @@
   }
 }
 
-/* visitekaartje container */
+/* Visitekaartje container */
 .business-card {
   background: linear-gradient(#0d7c66, #41b3a2, #bde8ca, #d7c3f1);
-  width: 35vw;
-  max-width: 90%;
-  box-shadow: 0 0.25rem 0.5rem #ce51511a;
+  width: 34.375rem; 
+  height: 18.75rem; 
+  box-shadow: 0 0.25rem 0.5rem rgba(206, 81, 81, 0.1);
   border-radius: 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeLoop 3s ease-in-out infinite alternate;
+
 }
 
 /* Media query voor .business-card */
 @media (width <= 48rem) {
   .business-card {
     width: 80vw;
+    height: auto; 
+    font-size: 0.875rem;
+
+
   }
 }
-
-/* Pseudo-element voor  extra achtergrondvorm in de kaart */
+/* Pseudo-element voor extra achtergrondvorm in de kaart */
 .business-card::before {
   content: "";
   position: absolute;
-  top: -5%;
-  right: -5%;
-  width: 12.5rem;
-  height: 12.5rem;
+  top: 0.5rem; 
+  right: 0.5rem; 
+  width: 10rem; 
+  height: 10rem;
   background-color: #c65bcf;
   border-radius: 50%;
-  opacity: 0.2;
+  opacity: 0.2; 
+  width: 12rem; 
+  height: 12rem;
 }
+
 
 /* Media query voor .business-card::before */
 @media (width <= 48rem) {
@@ -67,145 +79,132 @@
 
 /* Stijlen voor de titel op de visitekaart */
 .business-card h1 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #0f5248;
-  margin: 0.3125rem 0 0.625rem;
+  margin-top: 0.75rem; 
   font-family: 'Permanent Marker', cursive;
+  margin-left: 1.25rem;
+
 }
 
 /* Media query voor .business-card h1 */
 @media (width <= 48rem) {
   .business-card h1 {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 /* Stijlen voor de profielfoto */
 .profile-photo {
-  width: 6.25rem;
-  height: 6.875rem;
+  width: 6.25rem; 
+  height: 6.25rem; 
   border-radius: 50%;
   object-fit: cover;
-  border: 0.3125rem solid #0d7c66;
+  border: 0.25rem solid #0d7c66;
+  margin-top: 0.75rem; 
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
   animation: backgroundAnimation 10s infinite;
+
 }
 
 /* Media query voor .profile-photo */
 @media (width <= 48rem) {
   .profile-photo {
     width: 5rem;
-    height: 5.5rem;
+    height: 5rem;
   }
 }
 
 /* Info onder profielfoto */
 .avatar-card p {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #1b403a;
+  font-weight: bold;
 }
 
 /* Media query voor .avatar-card p */
 @media (width <= 48rem) {
   .avatar-card p {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 }
 
 /* Stijlen voor de padding van de kaartinhoud */
 .card-padding {
-  padding: 1.25rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  margin-top: 0.625rem;
+  margin-top: 0.5rem;
   justify-content: space-between;
+  width: 100%;
 }
 
 /* Media query voor .card-padding */
 @media (width <= 48rem) {
   .card-padding {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.75rem;
   }
 }
 
 /* Stijlen voor de quote-sectie */
 .quote-card {
-  margin-top: -1.875rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-style: italic;
-  padding: 0.625rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   font-family: "Georgia", serif;
-  animation: heartbeat 2s ease-in-out infinite;
+  color: #0f5248;
+
 }
 
 /* Media query voor .quote-card */
 @media (width <= 48rem) {
   .quote-card {
-    font-size: 0.75rem;
-    margin-top: -1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
   }
 }
 
-/* Kleur van de tekst in de quote-sectie */
-.quote-card p {
-  color: #0f5248;
-}
+
 
 /* Stijlen voor de vaardigheidssectie */
-
 .skill p {
   margin: 0;
   color: #0f5248;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.3125rem 0;
-  font-size: 0.625rem;
+  padding: 0.25rem 0;
+  font-size: 1rem;
   font-family: "Times New Roman", Times, serif;
 }
 
 /* Media query voor .skill p */
 @media (width <= 48rem) {
   .skill p {
-    font-size: 0.5rem;
+    font-size: 0.875rem;
   }
 }
 
 /* Stijlen voor de voettekst van het visitekaartje */
 .footer-card {
-  padding: 0.5rem;
-  background-color: #89a39f;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: #1b403a;
-  font-size: 0.625rem;
+  width: 100%;
+  height: 0.3125rem ;
+  background-color: rgba(137, 163, 159, 0.7); 
+  border-radius: 1rem;
+  margin-top: 1rem;
+
 }
 
 /* Media query voor .footer-card */
 @media (width <= 48rem) {
   .footer-card {
     flex-direction: column;
-    font-size: 0.5rem;
-  }
-}
-
-/* Stijlen voor de bezoekenteller */
-.visit-counter {
-  margin-top: -0.0625rem;
-  margin-left: 9.375rem;
-  color: #43645f;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 0.625rem;
-}
-
-/* Media query voor .visit-counter */
-@media (width <= 48rem) {
-  .visit-counter {
-    margin-left: 0;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -218,7 +217,7 @@
     border-color: #0f5248;
   }
   50% {
-    border-color: #bde8ca;
+    border-color: #392b39;
   }
   75% {
     border-color: #89a39f;
@@ -234,5 +233,16 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes fadeLoop {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
   }
 }
